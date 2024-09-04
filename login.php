@@ -2,6 +2,8 @@
 // login.php
 session_start();
 
+$error = '';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'config.php';
 
@@ -22,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $username;
             header("Location: dashboard.php");
         } else {
-            echo "Invalid credentials";
+            $error = 'Invalid credentials. Please try again.';
         }
     } else {
-        echo "Invalid credentials";
+        $error = 'Invalid credentials. Please try again.';
     }
 
     $stmt->close();
@@ -43,6 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="container">
     <h1>Login</h1>
+    <?php if (!empty($error)): ?>
+        <div class="error-message"><?php echo $error; ?></div>
+    <?php endif; ?>
     <form action="./login.php" method="POST">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>

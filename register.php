@@ -32,19 +32,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="container">
     <h1>Register</h1>
-    <form name="registrationForm" action="register.php" method="POST" onsubmit="return validateRegistrationForm()">
+    <form name="registrationForm" action="./register.php" method="POST" onsubmit="return validateRegistrationForm()">
         <label for="username">Username</label>
         <input type="text" name="username" id="username" required>
-        <br><br>
+
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
-        <br><br>
+
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required>
-        <br><br>
+
         <label for="confirm_password">Confirm Password</label>
         <input type="password" name="confirm_password" id="confirm_password" required>
-        <br><br>
+
         <button type="submit" class="btn">Register</button>
     </form>
     <p>Already have an account? <a href="login.php">Login here</a>.</p>

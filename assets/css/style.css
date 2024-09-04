@@ -12,12 +12,12 @@ body {
 }
 
 .container {
-    border-radius: 8px;
     text-align: center;
     width: auto;
     padding: 30px;
     background-color: #f9f9f9;
-    max-width: 1200px;
+    border-radius: 8px;
+    max-width: 800px;
     margin: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -50,6 +50,23 @@ p {
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+/* Logout Button Styling */
+.btn-logout {
+    background-color: #dc3545;
+    float: right;
+    margin-top: -10px;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
 }
 
 a.btn {
@@ -120,4 +137,79 @@ table td .btn:hover {
     width: 100%;
     overflow-x: auto;
     margin: 20px 0;
+}
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #007bff;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel Button Styling */
+form a.btn {
+    display: inline-block;
+    background-color: #6c757d;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form a.btn:hover {
+    background-color: #5a6268;
+}
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
 }

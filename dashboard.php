@@ -9,6 +9,7 @@
 <body>
 <div class="container">
     <h1>Product Dashboard</h1>
+    <a href="./logout.php" class="btn btn-logout">Logout</a>
     <a href="./create_product.php" class="btn">Add New Product</a>
     <div class="table-container">
         <table>
@@ -37,7 +38,7 @@
                     echo "</tr>";
                 }
             } else {
-                echo "<tr><td colspan='4'>No products found.</td></tr>";
+                echo "<tr><td colspan='4' >No products found.</td></tr>";
             }
 
             $conn->close();
