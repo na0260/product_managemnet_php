@@ -46,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form action="./login.php" method="POST">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
-
+        <br><br>
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required>
-
+        <br><br>
         <button type="submit" class="btn">Login</button>
     </form>
     <p>Don't have an account? <a href="register.php">Register here</a>.</p>
